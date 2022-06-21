@@ -7,7 +7,7 @@ const app = express();
 
 const dbURI = "mongodb+srv://admin-ihor:33qwerty33@cluster0.ddemg.mongodb.net/node-tuts?retryWrites=true&w=majority"
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err));
 
 // register view engine
