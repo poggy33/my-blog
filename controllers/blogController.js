@@ -31,6 +31,7 @@ const blog_create_post = (req, res) => {
   blog.save()
     .then(result => {
       res.redirect('/blogs');
+      // console.log(blog.createdAt);
     })
     .catch(err => {
       console.log(err);
